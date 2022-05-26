@@ -16,7 +16,12 @@ DEFORM_MESH_PATH = './deformed_mesh.obj'
 
 def augment_handle_points(poses2d, size):
     target_poses2d = poses2d.copy()
-    target_poses2d[5] = [100, 150]
+    # target_poses2d[5] = [100, 150]
+
+    target_poses2d[0,0] += 10
+    target_poses2d[1,0] += 10
+    target_poses2d[2,0] -= 10
+    target_poses2d[3,0] -= 10
 
     return target_poses2d
 
